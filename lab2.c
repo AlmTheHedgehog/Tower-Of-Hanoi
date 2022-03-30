@@ -1,25 +1,21 @@
-#include "primlib.h"
 #include <stdlib.h>
-#include <math.h>
+#include "primlib.h"
+#include "struct.h"
+#include "controller.h"
+#include "graphics.h"
 
-void drawing();
 
 int main(int argc, char *argv[]){
     if (gfx_init())
         exit(3);
 
-    while(!gfx_isKeyDown(SDLK_ESCAPE)){
+    short int cur_screen = 0;
+
+    while(cur_screen == 0){
         drawing();
-    }   
+        exit_check(&cur_screen);
+    }
 
     return 0;
 }
 
-void drawing(){
-    gfx_filledRect(0, 0, gfx_screenWidth() - 1, gfx_screenHeight() - 1, BLACK);
-
-
-
-    gfx_updateScreen();
-    SDL_Delay(10);
-}
