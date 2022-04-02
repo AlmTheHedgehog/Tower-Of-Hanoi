@@ -3,4 +3,4 @@ lab2.o
 primlib.o
 controller.o
 graphics.o
-struct.o
+structs.o

@@ -6,11 +6,16 @@
 
 struct stack_strct{
     short int head;
-    short int values[NMBR_DISCS];
+    unsigned short int values[NMBR_DISCS];
 };
 
+//stack functions
+void init_peg_stacks(struct stack_strct *pegs_stacks);
 unsigned short int isEmpty(struct stack_strct *stack);
-short int top(struct stack_strct *stack);
+unsigned short int isFull(struct stack_strct *stack);
+unsigned short int top(struct stack_strct *stack);
+void push(struct stack_strct *stack, short int value);
+unsigned short int pop(struct stack_strct *stack);
 
 
 #endif
