@@ -17,4 +17,8 @@ controller.o: controller.c controller.h
 graphics.o: graphics.c graphics.h
 
 clean:
-	-rm primlib.o testlib.o structs.o controller.o graphics.o testlib
+	-rm primlib.o structs.o controller.o graphics.o lab2.o lab2
+
+remake:
+	make clean
+	make

@@ -1,12 +1,19 @@
 #ifndef STRUCT_H
 #define STRUCT_H
 
-#define NMBR_PEGS 10
+//game define constants
+#define NMBR_PEGS 7
 #define NMBR_DISCS 70
+
+//graphical define constants
+#define SCR_WIDTH 1280
+#define SCR_HEIGHT 720
+#define DIST_BETWEEN_PEGS 10
+#define DIST_BTW_PEG_DISK 15
 
 struct stack_strct{
     short int head;
-    unsigned short int values[NMBR_DISCS];
+    unsigned short int values[NMBR_DISCS];//values from 1
 };
 
 //stack functions

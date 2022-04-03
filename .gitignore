@@ -4,3 +4,4 @@ primlib.o
 controller.o
 graphics.o
 structs.o
+.vscode/

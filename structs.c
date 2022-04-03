@@ -4,7 +4,6 @@
 #include "graphics.h"
 #include "structs.h"
 
-
 //stack functions
 void init_peg_stacks(struct stack_strct *pegs_stacks){
     for(int peg = 0; peg < NMBR_PEGS; peg++){
