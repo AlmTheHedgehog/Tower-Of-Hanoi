@@ -16,7 +16,7 @@ int main(int argc, char *argv[]){
     if (gfx_init())
         exit(3);
 
-    short int cur_screen = 0, cur_move = 0, strt_destination[2] = {0};
+    short int cur_screen = 0, cur_move = 0, strt_destination[2] = {-1, -1};//strt_dest from 1
     struct stack_strct pegs_stacks[NMBR_PEGS];
     init_peg_stacks(pegs_stacks);
 
@@ -24,9 +24,9 @@ int main(int argc, char *argv[]){
         if(cur_screen == 0){
             if(cur_move == 0){
                 main_events_check(pegs_stacks, &cur_screen, &cur_move, strt_destination);
-                main_drowing_static(pegs_stacks);
+                main_draw(0, pegs_stacks, &cur_move, strt_destination);
             }else{
-                main_drowing_move(pegs_stacks, &cur_move, strt_destination);
+                main_draw(1, pegs_stacks, &cur_move, strt_destination);
             }
         }else{
             final_events_check(pegs_stacks, &cur_screen);

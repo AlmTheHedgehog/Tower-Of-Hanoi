@@ -51,6 +51,12 @@ unsigned short int pop(struct stack_strct *stack){
         stack->head--;
         return value;
     }else{
-        return -1;
+        return 0;
     }
+}
+
+//arrays functions
+void strt_dest_reset(short int *strt_destination){
+    *strt_destination = -1;
+    *(strt_destination+1) = -1;
 }
